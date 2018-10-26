@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcAssignment2.helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace MvcAssignment2.Controllers
 {
     public class HomeController : Controller
     {
+        [ActionFilters]
         public ActionResult Index()
         {
             return View();
