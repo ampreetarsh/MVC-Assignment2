@@ -9,7 +9,6 @@ namespace MvcAssignment2.Controllers
 {
     public class HomeController : Controller
     {
-        [ActionFilters]
         public ActionResult Index()
         {
             return View();

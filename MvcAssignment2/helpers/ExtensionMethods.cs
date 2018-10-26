@@ -10,7 +10,8 @@ namespace MvcAssignment2.helpers
         public static string ToDigitsOnly(this string str)
         {
             var newstr = "";
-            foreach (var i in str)
+            var arrayOfStrings = str.ToCharArray();
+            foreach (var i in arrayOfStrings)
             {
                 if (char.IsDigit(i))
                 {
@@ -20,7 +21,7 @@ namespace MvcAssignment2.helpers
             return newstr;
         }
 
-        public static int ToAge(this DateTimeOffset dateOfBirth) {
+        public static int ToAge(this DateTime dateOfBirth) {
             var today = DateTime.Today;
             var a = (today.Year * 100 + today.Month) * 100 + today.Day;
             var b = (dateOfBirth.Year * 100 + dateOfBirth.Month) * 100 + dateOfBirth.Day;
